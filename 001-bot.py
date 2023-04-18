@@ -130,7 +130,7 @@ def preencherform(lista):
         # preenche email
             buscar_email = driver.find_element_by_css_selector("#email_candidato")
             buscar_email.clear()
-            Email = 'lincolnmenezest@outlook.com'
+            Email = 'email@outlook.com'
             sentence = Email
             for character in sentence:
                     buscar_email.send_keys(character)
@@ -142,7 +142,7 @@ def preencherform(lista):
         # preenche celular
             buscar_cel =  driver.find_element_by_css_selector("#celular_candidato")
             buscar_cel.clear()
-            Celular = '21990679713'
+            Celular = '21999999999'
             sentence = Celular
             for character in sentence:
                     buscar_cel.send_keys(character)
@@ -155,7 +155,7 @@ def preencherform(lista):
         # preenche telefone fixo
             buscar_tel =  driver.find_element_by_css_selector("#telefone_candidato")
             buscar_tel.clear()
-            Telefone = '2126571421'
+            Telefone = '2122345678'
             sentence = Telefone
             for character in sentence:
                     buscar_tel.send_keys(character)
@@ -168,7 +168,7 @@ def preencherform(lista):
         # preenche pretenção salarial
             buscar_pretsal = driver.find_element_by_css_selector("#pretensao_salarial")
             buscar_pretsal.clear()
-            Pret_Sal = '150000'
+            Pret_Sal = 'xxxxxxx'
             sentence = Pret_Sal
             for character in sentence:
                     buscar_pretsal.send_keys(character)
@@ -181,7 +181,7 @@ def preencherform(lista):
             anexo_curriculo = driver.find_element_by_xpath('//*[@value="anexo"]')
             anexo_curriculo.click()
             input = driver.find_element_by_id("anexo")
-            input.send_keys(r'C:\Users\Home\Contacts\Desktop\lincoln\botcurriculo\Curriculo-LincolnMenezes.pdf')
+            input.send_keys(r'C:\CaminhoParaArquivo\Curriculo.pdf')
         except:
             pass
 
@@ -192,7 +192,7 @@ def preencherform(lista):
             time.sleep((1)/4)
             buscar_curriculo = driver.find_element_by_xpath('//*[@id="curriculo_candidato"]')
             buscar_curriculo.clear()
-            Curriculo = r'C:\Users\Home\Contacts\Desktop\lincoln\botcurriculo\curriculo.txt'
+            Curriculo = r'C:\CaminhoParaArquivo\Curriculo.txt'
             copy_curr = open(Curriculo, 'r').read()
             pyperclip.copy(copy_curr)
             buscar_curriculo.send_keys(Keys.CONTROL+ "v")
@@ -203,7 +203,7 @@ def preencherform(lista):
         # preenche apresentação
             buscar_apresentacao = driver.find_element_by_css_selector("#apresentacao_candidato")
             time.sleep((1)/4)
-            Apresentacao = r'C:\Users\Home\Contacts\Desktop\lincoln\botcurriculo\descricao.txt'
+            Apresentacao = r'C:\CaminhoParaArquivo\descricao.txt'
             copy_desc = open(Apresentacao, 'r').read()
             pyperclip.copy(copy_desc)
             buscar_apresentacao.send_keys(Keys.CONTROL+ "v")
